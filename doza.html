@@ -141,7 +141,37 @@
     <!-- </form> -->
   </div>
 </nav>
+    
+    <!-- tabel nou cu medicamentele selectate -->
 
+<table id="tabel_1">
+  <tr>
+    <td><input type="checkbox"></td>
+    <td>Coloana 1</td>
+    <td>Coloana 2</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox"></td>
+    <td>Coloana 1</td>
+    <td>Coloana 2</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox"></td>
+    <td>Coloana 1</td>
+    <td>Coloana 2</td>
+  </tr>
+</table>
+<p id="table">
+  <button onclick="createTable()">creaza tabel</button>
+  <!-- Adăugați un buton pentru a șterge tabelul nou -->
+<button onclick="deleteTable()">Șterge tabelul</button>
+<!-- Adăugați un buton pentru a deselecta toate rândurile din tabel -->
+<button onclick="uncheckRows()">Deselectează rândurile</button>
+</p>
+<div id="noulTabel">Noul Tabel:</div>
+
+
+<!-- Tabel cu medicamente si dozele de adminstrat -->
     <table class="table table-bordered table-striped table-hover">
       <thead>
         <tr>

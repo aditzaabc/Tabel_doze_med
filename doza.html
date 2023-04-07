@@ -142,7 +142,7 @@
   </div>
 </nav>
     
-    <!-- tabel nou cu medicamentele selectate -->
+    <!-- tabel nou cu medicamentele selectate
 
 <table id="tabel_1">
   <tr>
@@ -160,7 +160,7 @@
     <td>Coloana 1</td>
     <td>Coloana 2</td>
   </tr>
-</table>
+</table>  -->
 <p id="table">
   <button onclick="createTable()">creaza tabel</button>
   <!-- Adăugați un buton pentru a șterge tabelul nou -->
@@ -168,10 +168,14 @@
 <!-- Adăugați un buton pentru a deselecta toate rândurile din tabel -->
 <button onclick="uncheckRows()">Deselectează rândurile</button>
 </p>
-<div id="noulTabel">Noul Tabel:</div>
+<p>Medicamentele selectate:</p>
+<div id="noulTabel">
+  
+</div>
 
 
 <!-- Tabel cu medicamente si dozele de adminstrat -->
+<p>Lista medicamentelor disponibile:</p>
     <table class="table table-bordered table-striped table-hover">
       <thead>
         
@@ -181,7 +185,7 @@
         </tr>
       </thead>
 
-      <tbody>
+      <tbody id="tabel_1">
 
         <tr>
           <th scope="row"><input type="checkbox" class="form-check-input" id="same-address"> 

@@ -1,5 +1,6 @@
 
-//cod de la chatGBT
+//cod de la chatGBT:
+
 // Obține tabelul original
 
 function createTable(){
@@ -7,6 +8,7 @@ var tabelOriginal = document.getElementById("tabel_1");
 
 // Creează un nou tabel
 var tabelNou = document.createElement("table");
+tabelNou.classList.add("table", "table-bordered", "table-striped");
 
 // Parcurge fiecare rând din tabelul original
 for (var i = 0; i < tabelOriginal.rows.length; i++) {

@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2KSTRDBJ89"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2KSTRDBJ89');
+</script>
+  <title>Metro interface</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+    <header>
+      <!-- place navbar here -->
+      <div class="alert alert-danger d-flex align-items-center" role="alert">
+          <i class="bi bi-exclamation-triangle-fill text-danger me-3"  style="font-size: 2rem;"></i>
+          Atentie! Aceasta pagina este pentru uz personal.<br>Datele din tabel sunt orientative iar calculul dozei este raspunderea celui care administreaza medicamentul, doza trebuind verificata in prospectul medicamentului sau recomandata de un medic.
+        </div>
+    </header>
+    <main class="bg-danger-subtle">
+        <table class="table table-bordered table-striped table-hover">
+    <thead>
+      
+      <tr>
+        <th scope="col">Medicament | Doza/kgc * kgc | Mod admin/varsta | <strong><span class="text-success">+</span> <span class="text-danger">-</span> <span class="text-warning">R</span></strong></th>
+        
+      </tr>
+    </thead>
+
+    <tbody id="tabel_1">
+
+      <tr>
+        <th scope="row"><input type="checkbox" class="form-check-input" id="same-address"> 
+          Adrenalina<br>
+          <small class="text-muted">1mg/ml = 1fi = 1:1000 conc.</small>
+          
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalIdAdrenalina">
+            <i class="bi bi-gear"></i>
+          </button>
+          <a class="btn btn-light" data-bs-toggle="collapse" data-bs-target=".collapseWidth_Adrenalina" aria-expanded="false" aria-controls="collapseWidth_Adrenalina"><i class="bi bi-eyedropper text-success"> </i><i class="bi bi-arrow-right"></i></a>
+        </th>
+        
+        <td class="collapse collapse-horizontal collapseWidth_Adrenalina">
+          0,5mg= 0,5ml SC,IM<hr>
+          0,2 mg = 0,2 ml SC nediluat<hr>
+          0,15 mg = 0,15 ml SC ndiluat<hr>
+          0,05 - 0,1 mg = 0,5 - 0,1 ml SC nediluat<hr>
+          0,3 mg (0,3 ml sol nediluata) SC sau IM doar in coapsa profund !!!<hr>
+          0,3 - 0,5 mg = ml nediluat<hr>
+          0,01-0,5 micro g/kgc/min<hr>
+          1mg=1ml=1fi IV pt adulti sau ???? 0,1 mg iv bolus, adica 1ml din dilutia 1:10 (1ml adrenalina=1fi + 9 ml ser fiziologic)<hr>
+          <span id="D30">0.01</span> - <span id="D31">0.5</span> micro g/kgc/min: <span class="result" id="R30"></span> - <span class="result" id="R31"></span>micro grame/min (1mg = 1000 micro grame)<hr>
+          1mg=1ml=1fi IV pt adulti sau ???? 0,1 mg iv bolus, adica 1ml din dilutia 1:10 (1ml adrenalina=1fi + 9 ml ser fiziologic)
+        </td>
+        <td class="collapse collapse-horizontal collapseWidth_Adrenalina">adulti: SC, IM<hr>
+          6-12 ani (18-33kg): SC<hr>
+          2-6 ani (12-18 kg): SC<hr>
+          copii sub 2 ani (sub 12 kg): SC<hr>
+          <span class="text-warning"><strong>SOC anafilatic: SC,IM</strong></span><hr>
+          <span class="text-warning"><strong>pt criza de astm bronsic: SC</strong></span><hr>
+          <span class="text-danger"><strong>pt deprimare cardiocirculatorie cu stari de soc: injectomat;</strong></span><hr>
+          <span class="text-success"><strong>pt STOP SCR: IV</strong></span>
+        </td> 
+      </tr>
+
+      <tr>
+        <th scope="row"><input type="checkbox" class="form-check-input" id="same-address">
+          Amiodarona<br>
+          <small class="text-muted">150mg/3ml</small>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalIdAmiodarona">
+            <i class="bi bi-gear"></i>
+          </button>
+          <a class="btn btn-light" data-bs-toggle="collapse" data-bs-target=".collapseWidth_Amiodarona" aria-expanded="false" aria-controls="collapseWidth_Amiodarona"><i class="bi bi-eyedropper text-warning"> </i><i class="bi bi-arrow-right"></i></a>
+        </th>
+        <td class="collapse collapse-horizontal collapseWidth_Amiodarona"><span id="D16">5</span>mg/kgc/zi: <span class="result" id="R16"></span>mg/zi, in 3 min cu pauza de 15 min (pt 70kg- 350mg=2fi)<hr></td>
+        <td class="collapse collapse-horizontal collapseWidth_Amiodarona"><span class="text-warning"><strong>adulti: IV, diluat cu glucoza 50mg/ml (1fi in 3 ml glucoza);</strong></span><hr>
+          <span class="text-danger"><strong>copii sub 3 ani: NU SE ADMIN !!</strong></span>
+      </td>
+      </tr>
+
+      <tr>
+        <th scope="row"><input type="checkbox" class="form-check-input" id="same-address">
+          Algocalmin<br>
+          <small class="text-muted">1g/2ml</small>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalAlgocalmin">
+            <i class="bi bi-gear"></i>
+          </button>
+          
+          <a class="btn btn-light" data-bs-toggle="collapse" data-bs-target=".collapseWidth_Algocalmin" aria-expanded="false" aria-controls="collapseWidth_Algocalmin"><i class="bi bi-eyedropper text-warning"> </i><i class="bi bi-arrow-right"></i></a>
+        </th>
+        <td class="collapse collapse-horizontal collapseWidth_Algocalmin">500-1000-2500mg/doza<hr>
+          maxim <span id="D1">5</span>mg/kgc: <span class="result" id="R1"></span>mg<br>
+          minim <span id="D2">2</span>mg/kgc: <span class="result" id="R2"></span>mg</td>
+        <td class="collapse collapse-horizontal collapseWidth_Algocalmin"><span class="text-warning"><strong>15 ani - adulti: IM, IV lent (0,5g/min)<hr>
+          1 - 14 ani: IM, IV lent<hr>
+          3 - 11 luni: IM</strong></span>
+        </td>
+      </tr>
+
+      <tr>
+        <th scope="row"><input type="checkbox" class="form-check-input" id="same-address">
+          Algifen<br>
+          <small class="text-muted">2,5g algocalmin/5ml + altele</small>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalAlgifen">
+            <i class="bi bi-gear"></i>
+          </button>
+          
+          <a class="btn btn-light" data-bs-toggle="collapse" data-bs-target=".collapseWidth_Algifen" aria-expanded="false" aria-controls="collapseWidth_Algifen"><i class="bi bi-eyedropper text-warning"> </i><i class="bi bi-arrow-right"></i></a>
+        </th>
+        <td class="collapse collapse-horizontal collapseWidth_Algifen">1 - 3 fi/zi pt adulti<hr></td>
+        <td class="collapse collapse-horizontal collapseWidth_Algifen"><span class="text-warning"><strong>adulti: IM, IV<hr>
+          copii 3-11 luni: IM</strong></span><br>
+          <span class="text-danger"><strong>copii sub 3 luni sau &lt; 5kg: INTERZIS</strong></span></td>
+        
+      </tr>
+
+      <tr>
+        <th scope="row"><input type="checkbox" class="form-check-input" id="same-address">
+          Arnetin<br>
+          <small class="text-muted">50mg/2ml</small>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalArnetin">
+            <i class="bi bi-gear"></i>
+          </button>
+          
+          <a class="btn btn-light" data-bs-toggle="collapse" data-bs-target=".collapseWidth_Arnetin" aria-expanded="false" aria-controls="collapseWidth_Arnetin"><i class="bi bi-eyedropper text-warning"> </i><i class="bi bi-arrow-right"></i></a>
+        </th>
+        <td class="collapse collapse-horizontal collapseWidth_Arnetin">50mg/doza</td>
+        <td class="collapse collapse-horizontal collapseWidth_Arnetin"><span class="text-warning"><strong>peste 12 ani si adulti: IM, IV lent in 2 min, diluat in 20 ml sol;<hr>
+          copii/sugari  ?luni - 11 ani: IV lent, in 2 min;</strong></span></td>
+        
+      </tr>
+
+      <tr>
+        <th scope="row"><input type="checkbox" class="form-check-input" id="same-address">
+          Captopril<br>
+          <small class="text-muted">25mg/tb</small>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalIdCaptopril">
+            <i class="bi bi-gear"></i>
+          </button>
+          <a class="btn btn-light" data-bs-toggle="collapse" data-bs-target=".collapseWidth_Captopril" aria-expanded="false" aria-controls="collapseWidth_Captopril"><i class="bi bi-eyedropper text-warning"> </i><i class="bi bi-arrow-right"></i></a>
+        </th>
+        <td class="collapse collapse-horizontal collapseWidth_Captopril">12,5-25mg<hr>
+          <span id="D14">0.3</span>mg/kgc: <span class="result" id="R14"></span>mg</td>
+        <td class="collapse collapse-horizontal collapseWidth_Captopril"><span class="text-warning"><strong>adulti: PO<hr>
+           copii: PO</strong></span></td>
+        
+      </tr>
+
+      <tr>
+        <th scope="row"><input type="checkbox" class="form-check-input" id="same-address">
+          Controloc<br>
+          <small class="text-muted">40 mg pulbere</small>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalIdControloc">
+            <i class="bi bi-gear"></i>
+          </button>
+          <a class="btn btn-light" data-bs-toggle="collapse" data-bs-target=".collapseWidth_Controloc" aria-expanded="false" aria-controls="collapseWidth_Controloc"><i class="bi bi-eyedropper text-warning"> </i><i class="bi bi-arrow-right"></i></a>
+        </th>
+        <td class="collapse collapse-horizontal collapseWidth_Controloc">vezi Pantoprazol</td>
+        <td class="collapse collapse-horizontal collapseWidth_Controloc">Idem</td>
+        
+      </tr>
+
+      <tr>
+        <th scope="row"><input type="checkbox" class="form-check-input" id="same-address">
+          Diazepam<br>
+          <small class="text-muted">10g/2ml</small>
+           <!--Button trigger modal-->
+          <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalDiazepam">
+            <i class="bi bi-gear"></i>
+          </button>
+          <a class="btn btn-light" data-bs-toggle="collapse" data-bs-target=".collapseWidth_Diazepam" aria-expanded="false" aria-controls="collapseWidth_Diazepam"><i class="bi bi-eyedropper text-warning"> </i><i class="bi bi-arrow-right"></i></a>
+        </th>
+        <td class="collapse collapse-horizontal collapseWidth_Diazepam">10-20mg/doza adulti<br>
+        minim <span id="D8">0.15</span>mg/kgc: <span class="result" id="R8"></span>mg,<br> maxim <span id="D9">0.25</span>mg/kgc: <span class="result" id="R9"></span>mg<hr>
+        <span id="D28">0.2</span> - <span id="D29">0.3</span>mg/kgc : <span class="result" id="R28"></span> - <span class="result" id="R29"></span>mg sau varstaX1mg, (pt 10kg: 0,4ml=2mg)</td>
+        <td class="collapse collapse-horizontal collapseWidth_Diazepam"><span class="text-warning"><strong>batrani: doza mai mica decat la adulti;<br>
+          adulti: IM, IV lent, 1ml/min<hr>
+          copii 6 luni- adolescenti: IM, IV lent;<br>
+          copii sub 6 luni: PRECAUTIE MAXIMA !</strong></span></td>
+      </tr>
+    
+      <tr>
+        <th scope="row"><input type="checkbox" class="form-check-input" id="same-address">
+          Dexametazona<br>
+          <small class="text-muted">8mg/2ml</small>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalDexametazona">
+            <i class="bi bi-gear"></i>
+          </button>
+          <a class="btn btn-light" data-bs-toggle="collapse" data-bs-target=".collapseWidth_Dexametazona" aria-expanded="false" aria-controls="collapseWidth_Dexametazona"><i class="bi bi-eyedropper"> </i><i class="bi bi-arrow-right"></i></a>
+        </th>
+        <td class="collapse collapse-horizontal collapseWidth_Dexametazona">0,4-24mg/zi<hr>
+          SOC:<br>
+          minim <span id="D10">2</span>mg/kgc: <span class="result" id="R10"></span>mg,<br> 
+          maxim <span id="D11">6</span>mg/kgc: <span class="result" id="R11"></span>mg<hr>
+          <span id="D17">0.20</span> - <span id="D18">0.40</span> mg/kgc/zi (<span id="D19">0.05</span> ml/kg pana la <span id="D20">0.1</span> ml/kg/zi): <span class="result" id="R17"></span>mg - <span class="result" id="R18"></span>mg/zi (<span class="result" id="R19"></span>ml - <span class="result" id="R20"></span>ml/zi)</td>
+        <td class="collapse collapse-horizontal collapseWidth_Dexametazona">aulti: IM, IV<hr>
+          in soc: IV<hr>
+          copii</td>
+      </tr>
+
+      <tr>
+        <th scope="row"><input type="checkbox" class="form-check-input" id="same-address">
+          Furosemid<br>
+          <small class="text-muted">20mg/2ml</small>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalFurosemid">
+            <i class="bi bi-gear"></i>
+          </button>
+          <a class="btn btn-light" data-bs-toggle="collapse" data-bs-target=".collapseWidth_Furosemid" aria-expanded="false" aria-controls="collapseWidth_Furosemid"><i class="bi bi-eyedropper text-warning"> </i><i class="bi bi-arrow-right"></i></a>
+        </th>
+        <td class="collapse collapse-horizontal collapseWidth_Furosemid">20-60mg<br>
+          maxim: <span id="D6">1</span>mg/kgc: <span class="result" id="R6"></span>mg,<br> minim: <span id="D7">0.5</span>mg/kgc: <span class="result" id="R7"></span>mg<hr>
+          20-40mg bolus, repetat la 20 min la nevoie</td>
+        <td class="collapse collapse-horizontal collapseWidth_Furosemid"><span class="text-warning"><strong>adulti: IM, IV 4mg/min<br><br>
+        copii: ??<hr>
+        edem pulmonar EPA: IV</strong></span>
+      </td>
+      </tr>
+
+      <tr>
+        <th scope="row"><input type="checkbox" class="form-check-input" id="same-address">
+          Glucoza 33%<br>
+          <small class="text-muted">3300mg/10ml</small>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalGlucoza">
+            <i class="bi bi-gear"></i>
+          </button>
+          <a class="btn btn-light" data-bs-toggle="collapse" data-bs-target=".collapseWidth_Glucoza" aria-expanded="false" aria-controls="collapseWidth_Glucoza"><i class="bi bi-eyedropper text-success"> </i><i class="bi bi-arrow-right"></i></a>
+        </th>
+        <td class="collapse collapse-horizontal collapseWidth_Glucoza">intre: <span id="D12">500</span>mg/kgc: <span class="result" id="R12"></span>mg si <span id="D13">800</span>mg/kgc: <span class="result" id="R13"></span>mg</td>
+        <td class="collapse collapse-horizontal collapseWidth_Glucoza"><span class="text-success"><strong>adulti, copii: IV</strong></span></td>
+        
+      </tr>
+
+      <tr>
+        <th scope="row"><input type="checkbox" class="form-check-input" id="same-address">
+          Hidrocortizon 25mg<br>
+          <small class="text-muted"></small>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalIdHidrocortizon25">
+            <i class="bi bi-gear"></i>
+          </button>
+          <a class="btn btn-light" data-bs-toggle="collapse" data-bs-target=".collapseWidth_HHC25" aria-expanded="false" aria-controls="collapseWidth_HHC25"><i class="bi bi-eyedropper"> </i><i class="bi bi-arrow-right"></i></a>
+        </th>
+        <td class="collapse collapse-horizontal collapseWidth_HHC25">100 - 200 mg sau<hr>
+          <span id="D21">10</span> - <span id="D22">20</span> mg/kgc: <span class="result" id="R21"></span> - <span class="result" id="R22"></span> mg (exp. pt 50kg: 500 mg - 1 g)<hr>
+          <span id="D23">5</span>mg/kgc: <span class="result" id="R23"></span>mg<hr>
+          <span id="D24">0.25</span> - <span id="D25">0.5</span> mg/kgc/zi: <span class="result" id="R24"></span> - <span class="result" id="R25"></span>mg, doza impartita la 8 ore</td>
+        <td class="collapse collapse-horizontal collapseWidth_HHC25">Adulti<hr>
+        in SOC<hr>
+        copii<hr>
+        copii cu insuficienţa corticosuprarenală acută
+      </td>
+      </tr>
+
+      <tr>
+        <th scope="row"><input type="checkbox" class="form-check-input" id="same-address">
+          Hidrocortizon 100mg<br>
+          <small class="text-muted"></small>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalIdHidrocortizon100">
+            <i class="bi bi-gear"></i>
+          </button>
+          <a class="btn btn-light" data-bs-toggle="collapse" data-bs-target=".collapseWidth_HHC100" aria-expanded="false" aria-controls="collapseWidth_HHC100"><i class="bi bi-eyedropper"> </i><i class="bi bi-arrow-right"></i></a>
+        </th>
+        <td class="collapse collapse-horizontal collapseWidth_HHC100">100mg IV<hr>
+        250-1000mg (100 mg repetat la 1, 3, 6 și 10 ore, daca e cazul)<hr>
+        <span id="D26">2</span> - <span id="D27">4</span> mg/kgc: <span class="result" id="R26"></span> - <span class="result" id="R27"></span>mg<hr>
+      100mg</td>
+        <td class="collapse collapse-horizontal collapseWidth_HHC100">adulti<hr>
+        in SOC<hr>
+      Copii 1L-12ani<hr>
+    Adolescenti</td> 
+      </tr>
+
+      <tr>
+        <th scope="row"><input type="checkbox" class="form-check-input" id="same-address">
+          Ketoprofen<br>
+          <small class="text-muted">100mg/2ml</small>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalKetoprofen">
+            <i class="bi bi-gear"></i>
+          </button>
+          <a class="btn btn-light" data-bs-toggle="collapse" data-bs-target=".collapseWidth_Ketoprofen" aria-expanded="false" aria-controls="collapseWidth_Ketoprofen"><i class="bi bi-eyedropper"> </i><i class="bi bi-arrow-right"></i></a>
+        </th>
+        <td class="collapse collapse-horizontal collapseWidth_Ketoprofen">100mg/doza adulti<hr></td>
+        <td class="collapse collapse-horizontal collapseWidth_Ketoprofen">adulti: IM lent, IV dizolvat in 100-150ml ser fiz sau glucoza 5% in 20 min;<hr>
+          <span class="text-danger"><strong>sub 15 ani: INTERZIS</strong></span>
+        </td>
+      </tr>
+
+      <tr>
+        <th scope="row"><input type="checkbox" class="form-check-input" id="same-address">
+          Metoclopramid<br>
+          <small class="text-muted">10mg/2ml</small>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalMetoclopramid">
+            <i class="bi bi-gear"></i>
+          </button>
+          <a class="btn btn-light" data-bs-toggle="collapse" data-bs-target=".collapseWidth_Metoclopramid" aria-expanded="false" aria-controls="collapseWidth_Metoclopramid"><i class="bi bi-eyedropper"> </i><i class="bi bi-arrow-right"></i></a>
+        </th>
+        <td class="collapse collapse-horizontal collapseWidth_Metoclopramid">10mg/doza sau <span id="D3">0.16</span>mg/kgc: <span class="result" id="R3"></span>mg<hr>
+          maxim: <span id="D4">0.15</span>mg/kgc: <span class="result" id="R4"></span>mg<br>
+          minim: <span id="D5">0.1</span>mg/kgc: <span class="result" id="R5"></span>mg
+            </td>
+        <td class="collapse collapse-horizontal collapseWidth_Metoclopramid"><span class="text-warning"><strong>adulti: IM, IV lent, in 3 min<hr>
+          copii: IV lent ??? (nu cred), IM mai bine!</strong></span><br>
+          <span class="text-danger"><strong>sub 1 an: INTERZIS !!!</strong></span></td>
+        
+      </tr>
+
+      <tr>
+        <th scope="row"><input type="checkbox" class="form-check-input" id="same-address">
+          No-Spa<br>
+          <small class="text-muted">40mg/2ml</small>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalNoSpa">
+            <i class="bi bi-gear"></i>
+          </button>
+          <a class="btn btn-light" data-bs-toggle="collapse" data-bs-target=".collapseWidth_Nospa" aria-expanded="false" aria-controls="collapseWidth_Nospa"><i class="bi bi-eyedropper text-warning"> </i><i class="bi bi-arrow-right"></i></a>
+        </th>
+        <td class="collapse collapse-horizontal collapseWidth_Nospa">40 - 80 mg (1-2 fi) pt adulti</td>
+        <td class="collapse collapse-horizontal collapseWidth_Nospa"><span class="text-warning"><strong>adulti: IM, IV lent</strong></span></td>
+        
+      </tr>
+
+      <tr>
+        <th scope="row"><input type="checkbox" class="form-check-input" id="same-address">
+          Novocalmin<br><small class="text-muted">300mg/sup</small>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalIdNovocalmin">
+            <i class="bi bi-gear"></i>
+          </button>
+          <a class="btn btn-light" data-bs-toggle="collapse" data-bs-target=".collapseWidth_Novocalmin" aria-expanded="false" aria-controls="collapseWidth_Novocalmin"><i class="bi bi-eyedropper text-warning"> </i><i class="bi bi-arrow-right"></i></a>
+        </th>
+        <td class="collapse collapse-horizontal collapseWidth_Novocalmin">un supozitor Novocalmin 300 mg</td>
+        <td class="collapse collapse-horizontal collapseWidth_Novocalmin">pt copii peste 4 ani: IR</td>
+      </tr>
+
+      <tr>
+        <th scope="row"><input type="checkbox" class="form-check-input" id="same-address">
+          Nitromint<br>
+          <small class="text-muted">spray 0,4mg/puf</small>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalIdNitromint">
+            <i class="bi bi-gear"></i>
+          </button>
+          <a class="btn btn-light" data-bs-toggle="collapse" data-bs-target=".collapseWidth_Nitromint" aria-expanded="false" aria-controls="collapseWidth_Nitromint"><i class="bi bi-eyedropper text-success"> </i><i class="bi bi-arrow-right"></i></a>
+        </th>
+        <td class="collapse collapse-horizontal collapseWidth_Nitromint">1 puf la 5 min</td>
+        <td class="collapse collapse-horizontal collapseWidth_Nitromint"><span class="text-success"><strong>adulti: spray sl</strong></span><hr>
+          <span class="text-warning"><strong>copii sub 18 ani: nu e indicat!!</strong></span></td>
+      </tr>
+
+      <tr>
+        <th scope="row"><input type="checkbox" class="form-check-input" id="same-address">
+          Paracetamol<br>
+          <small class="text-muted">125mg/sup</small>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalIdParacetamol">
+            <i class="bi bi-gear"></i>
+          </button>
+          <a class="btn btn-light" data-bs-toggle="collapse" data-bs-target=".collapseWidth_Paracetamol125" aria-expanded="false" aria-controls="collapseWidth_Paracetamol125"><i class="bi bi-eyedropper text-warning"> </i><i class="bi bi-arrow-right"></i></a>
+        </th>
+        <td class="collapse collapse-horizontal collapseWidth_Paracetamol125">1/2 sup IR<hr>
+          1 sup IR<hr>
+          <span id="D15">15</span>mg/kgc: <span class="result" id="R15"></span>mg</td>
+        <td class="collapse collapse-horizontal collapseWidth_Paracetamol125">copii 6-12 luni: IR<hr>
+          1-3 ani: IR<hr></td>
+      </tr>
+
+      <tr>
+        <th scope="row"><input type="checkbox" class="form-check-input" id="same-address">
+          Paracetamol<br>
+          <small class="text-muted">250mg/sup</small>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalIdParacetamol">
+            <i class="bi bi-gear"></i>
+          </button>
+          <a class="btn btn-light" data-bs-toggle="collapse" data-bs-target=".collapseWidth_Paracetamol250" aria-expanded="false" aria-controls="collapseWidth_Paracetamol250"><i class="bi bi-eyedropper text-warning"> </i><i class="bi bi-arrow-right"></i></a>
+        </th>
+        <td class="collapse collapse-horizontal collapseWidth_Paracetamol250">1 sup de 250mg IR<hr>
+          1 sup de 250mg IR</td>
+        <td class="collapse collapse-horizontal collapseWidth_Paracetamol250">3-7 ani: IR<hr>
+          7-15 ani: IR</td>
+      </tr>
+
+      <tr>
+        <th scope="row"><input type="checkbox" class="form-check-input" id="same-address">
+          Pantoprazol<br>
+          <small class="text-muted">40 mg, pulbere</small>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalIdPantoprazol">
+            <i class="bi bi-gear"></i>
+          </button>
+          <a class="btn btn-light" data-bs-toggle="collapse" data-bs-target=".collapseWidth_Pantoprazol" aria-expanded="false" aria-controls="collapseWidth_Pantoprazol"><i class="bi bi-eyedropper text-warning"> </i><i class="bi bi-arrow-right"></i></a>
+        </th>
+        <td class="collapse collapse-horizontal collapseWidth_Pantoprazol">1 fl iv/2-15 min</td>
+        <td class="collapse collapse-horizontal collapseWidth_Pantoprazol"><span class="text-warning"><strong>1 fl diluat cu 10 ml SF sau in 100ml PEV SF admin IV !!!</strong></span></td> 
+      </tr>
+
+      <tr>
+        <th scope="row"><input type="checkbox" class="form-check-input" id="same-address">
+          Quamatel<br>
+          <small class="text-muted">pulbere 20 mg + solvent</small>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalIdQuamatel">
+            <i class="bi bi-gear"></i>
+          </button>
+          <a class="btn btn-light" data-bs-toggle="collapse" data-bs-target=".collapseWidth_Quamatel" aria-expanded="false" aria-controls="collapseWidth_Quamatel"><i class="bi bi-eyedropper text-warning"> </i><i class="bi bi-arrow-right"></i></a>
+        </th>
+        <td class="collapse collapse-horizontal collapseWidth_Quamatel">1 fl IV in 2 min sau PEV 30 min</td>
+        <td class="collapse collapse-horizontal collapseWidth_Quamatel"><span class="text-warning"><strong>2 fl la 12 ore</strong></span></td>
+      </tr>
+
+      <tr>
+        <th scope="row"><input type="checkbox" class="form-check-input" id="same-address">
+          Tramadol<br>
+          <small class="text-muted">100mg/2ml</small>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalIdTramadol">
+            <i class="bi bi-gear"></i>
+          </button>
+          <a class="btn btn-light" data-bs-toggle="collapse" data-bs-target=".collapseWidth_Tramadol" aria-expanded="false" aria-controls="collapseWidth_Tramadol"><i class="bi bi-eyedropper text-danger"> </i><i class="bi bi-arrow-right"></i></a>
+        </th>
+        <td class="collapse collapse-horizontal collapseWidth_Tramadol"> <br>
+          50-100mg<br>
+         </td>
+        <td class="collapse collapse-horizontal collapseWidth_Tramadol"><span class="text-danger"><strong>varstnici peste 75 ani: ??<br>
+          adulti si peste14 ani: IM, IV f lent, SC<br>
+          copii sub 14 ani: ??</strong></span></td>
+      </tr>
+
+      
+
+      <tr>
+        <th scope="row"><input type="checkbox" class="form-check-input" id="same-address">
+          Ventolin<br>
+          <small class="text-muted">5mg/ml sol pt aerosol</small>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalIdVentolin">
+            <i class="bi bi-gear"></i>
+          </button>
+          <a class="btn btn-light" data-bs-toggle="collapse" data-bs-target=".collapseWidth_Ventolin" aria-expanded="false" aria-controls="collapseWidth_Ventolin"><i class="bi bi-eyedropper text-warning"> </i><i class="bi bi-arrow-right"></i></a>
+        </th>
+        <td class="collapse collapse-horizontal collapseWidth_Ventolin">0,5-1ml sol + 2-2,5ml SF in 10min sau 2ml in 3-5min nediluat<hr>
+          0,5ml + SF= 2-2,5ml chiar si 1ml sol + SF</td>
+        <td class="collapse collapse-horizontal collapseWidth_Ventolin"><span class="text-warning"><strong>aulti: aerosol<hr>
+          copii sub 12 ani: aerosol</strong></span></td>
+        
+      </tr>
+
+      
+<!-- End of table ================================================================================================================================================== -->
+<!-- End of table ================================================================================================================================================== -->
+<!-- End of table ================================================================================================================================================== -->
+      
+      <tr>
+        <th scope="row"><input type="checkbox" class="form-check-input" id="same-address">
+          Quamatel<br>
+          <small class="text-muted"></small>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalIdQuamatel">
+            <i class="bi bi-gear"></i>
+          </button>
+          <a class="btn btn-light" data-bs-toggle="collapse" data-bs-target=".collapseWidth_Med" aria-expanded="false" aria-controls="collapseWidth_Med"><i class="bi bi-eyedropper"> </i><i class="bi bi-arrow-right"></i></a>
+        </th>
+        <td class="collapse collapse-horizontal collapseWidth_Med">Lorem</td>
+        <td class="collapse collapse-horizontal collapseWidth_Med">Ipsum</td>
+        
+      </tr>
+      
+
+    </tbody>
+        </table>
+    </main>
+
+    <footer class="py-3 my-4">
+        <!-- place footer here -->
+        <p class="text-center text-body-secondary text-danger">© 2023 AdiB. All rights reserved.</p>
+      </footer>
+      <!-- Bootstrap JavaScript Libraries -->
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+      </script>
+    
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+      </script>
+    
+    </body>
+    
+    </html>

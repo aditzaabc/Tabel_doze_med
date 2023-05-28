@@ -41,9 +41,8 @@
         <div class="card h-100 border border-danger border-5 bg-danger bg-opacity-10">
           <i class="bi bi-card-checklist" style="font-size: 5rem; color: red;"></i>
           <div class="card-body">
-            <h5 class="card-title">Medicamente</h5>
-            <p class="card-text">Lista medicamentelor disponibile.<br>
-              Se poate ascunde textul cu tooltips.</p>
+            <h5 class="card-title"><a class="link-danger text-decoration-none" href="#" target="_blank" data-bs-toggle="tooltip" data-bs-title="Lista medicamentelor disponibile.">Medicamente</a></h5>
+            <p class="card-text"></p>
           </div>
         </div>
       </div>
@@ -51,8 +50,8 @@
         <div class="card h-100 border border-danger border-5 bg-danger bg-opacity-10">
           <i class="bi bi-calculator" style="font-size: 5rem; color: red;"></i>
           <div class="card-body">
-            <h5 class="card-title">Calcul doza</h5>
-            <p class="card-text">Doza de administrat/kgc sau varsta.</p>
+            <h5 class="card-title"><a class="link-danger text-decoration-none" href="#" target="_blank" data-bs-toggle="tooltip" data-bs-title="Doza de administrat/kgc sau varsta.">Calcul doza</a></h5>
+            <p class="card-text"></p>
           </div>
         </div>
       </div>
@@ -60,8 +59,8 @@
         <div class="card h-100 border border-danger border-5 bg-danger bg-opacity-10">
           <i class="bi bi-images" style="font-size: 5rem; color: red;"></i>
           <div class="card-body">
-            <h5 class="card-title">Infografice</h5>
-            <p class="card-text">Imagini/afise cu informatii utile in functie de situatie/afectiune.</p>
+            <h5 class="card-title"><a class="link-danger text-decoration-none" href="#" target="_blank" data-bs-toggle="tooltip" data-bs-title="Imagini/afise cu informatii utile in functie de situatie/afectiune.">Infografice</a></h5>
+            <p class="card-text"></p>
           </div>
         </div>
       </div>
@@ -69,8 +68,8 @@
         <div class="card h-100 border border-danger border-5 bg-danger bg-opacity-10">
           <i class="bi bi-tools" style="font-size: 5rem; color: red;"></i>
           <div class="card-body">
-            <h5 class="card-title">Tools</h5>
-            <p class="card-text">unelte utile din alte surse.</p>
+            <h5 class="card-title"><a class="link-danger text-decoration-none" href="#" target="_blank" data-bs-toggle="tooltip" data-bs-title="Unelte utile din alte surse.">Tools</a></h5>
+            <p class="card-text"></p>
           </div>
         </div>
       </div>
@@ -78,8 +77,8 @@
         <div class="card h-100 border border-danger border-5 bg-danger bg-opacity-10">
           <i class="bi bi-moisture" style="font-size: 5rem; color: red;"></i>
           <div class="card-body">
-            <h5 class="card-title">Convertor</h5>
-            <p class="card-text">Convertor de unitati/valori.</p>
+            <h5 class="card-title"><a class="link-danger text-decoration-none" href="#" target="_blank" data-bs-toggle="tooltip" data-bs-title="Convertor de unitati/valori.">Convertor</a></h5>
+            <p class="card-text"></p>
           </div>
         </div>
       </div>
@@ -87,8 +86,8 @@
         <div class="card h-100 border border-danger border-5 bg-danger bg-opacity-10">
           <i class="bi bi-eyedropper" style="font-size: 5rem; color: red;"></i>
           <div class="card-body">
-            <h5 class="card-title">Detalii medicamente</h5>
-            <p class="card-text">Doze, mod administrare, prospecte ale medicamentelor disponibile.</p>
+            <h5 class="card-title"><a class="link-danger text-decoration-none" href="#" target="_blank" data-bs-toggle="tooltip" data-bs-title="Doze, mod administrare, prospecte ale medicamentelor disponibile.">Detalii medicamente</a></h5>
+            <p class="card-text"></p>
           </div>
         </div>
       </div>
@@ -107,6 +106,11 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+<!-- script pt tooltip-->
+  <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
   </script>
 </body>
 

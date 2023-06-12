@@ -36,6 +36,9 @@ for (var i = 0; i < tabelOriginal.rows.length; i++) {
 
 // Adaugă tabelul nou la document
 document.body.appendChild(tabelNou);
+  // Adăugați tabela nouă în pagina web existentă
+  //tabelExistent.parentNode.appendChild(tabelNou);
+  
 
 // Adaugă tabelul nou în div-ul cu ID-ul "noulTabel"
 var divTabel = document.getElementById("noulTabel");
@@ -69,3 +72,16 @@ function uncheckRows() {
     checkboxuri[i].checked = false;
   }
 }
+
+
+
+//script pt calcul doza medicament/kgc
+function multiply() {
+  for (let n = 1; n < 32; n++){
+  let greutatea = document.getElementById("greutatea").value;
+  let doza = document.getElementById("D".concat(n)).innerHTML;
+  let rezultat = greutatea * doza;
+  document.getElementById("R".concat(n)).innerHTML = rezultat.toFixed(2);
+  }
+}
+document.getElementById("GG").onclick = multiply;

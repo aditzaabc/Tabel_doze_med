@@ -11,7 +11,7 @@
 
   gtag('config', 'G-2KSTRDBJ89');
 </script>
-  <title>Metro interface</title>
+  <title>Calcul doza</title>
   <meta name="robots" content="noindex, nofollow" />
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -39,26 +39,10 @@
       <label for="" class="form-label  me-sm-2">Greutatea:&nbsp;</label>
       <input class="form-control me-2" type="number"  id="greutatea" placeholder="Kg" aria-label="kilograme">
       <button class="btn btn-outline-success  me-sm-2" type="submit"  id="GG">Submit</button>
-      <button class="btn btn-outline-danger  me-sm-2" type="reset" id="reset" onclick="location.reload();">Reset</button>
-      
-      
+      <button class="btn btn-outline-danger  me-sm-2" type="reset" id="reset" onclick="location.reload();">Reset</button>  
       </div>
 
-      <p id="table">
-        <button onclick="createTable()">creaza tabel</button>
-        <!-- Adăugați un buton pentru a șterge tabelul nou -->
-      <button onclick="deleteTable()">Șterge tabelul</button>
-      <!-- Adăugați un buton pentru a deselecta toate rândurile din tabel -->
-      <button onclick="uncheckRows()">Deselectează rândurile</button>
-      </p>
-      <p>Medicamentele selectate:</p>
-      <div id="noulTabel">
-        
-      </div>
-
-
-
-    
+  
 
   </main>
   <footer class="py-3 my-4">
@@ -86,7 +70,7 @@
 document.getElementById("GG").onclick = multiply;
 
 </script>
-
+<!-- script pt creare tabel-->
 <script src="script.js"></script>
 
 </body>

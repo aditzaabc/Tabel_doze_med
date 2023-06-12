@@ -11,7 +11,7 @@
 
   gtag('config', 'G-2KSTRDBJ89');
 </script>
-  <title>Metro interface</title>
+  <title>Medicamente</title>
   <meta name="robots" content="noindex, nofollow" />
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -22,6 +22,8 @@
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <!-- Bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <!-- Custom style CSS-->
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -34,7 +36,45 @@
         </div>
     </header>
     <main>
-      <p>Lista medicamentelor disponibile:</p>
+
+      <div class="container-fluid text-center">
+      <!-- formular cu introducere greutate de calculat doza med selectionate -->
+    <div class="d-flex justify-content-center">
+      <i class="bi bi-1-square  text-danger me-3" style="font-size: 2rem;"></i>
+      <button type="button" class="btn btn-primary me-2" disabled>Greutatea:</button>
+      <!-- <label for="" class="form-label  me-sm-2">Greutatea:&nbsp;</label> -->
+      <input class="form-control me-2" type="number"  id="greutatea" placeholder="Kg" aria-label="kilograme" style="max-width: 200px;">
+      <button class="btn btn-success  me-sm-2" type="submit"  id="GG">Submit</button>
+      <button class="btn btn-danger  me-sm-2" type="reset" id="reset" onclick="location.reload();">Reset</button>  
+      </div>
+      <hr class="border border-danger border-2 opacity-50">
+
+
+<!-- Creaza tabel-->
+<div class="d-flex justify-content-center" id="table">
+      
+        <i class="bi bi-2-square  text-danger me-3" style="font-size: 2rem;"></i>
+        <button type="button" class="btn btn-success" onclick="createTable()">creaza tabel</button>
+        <!-- Adăugați un buton pentru a șterge tabelul nou -->
+      <button type="button" class="btn btn-danger" onclick="deleteTable()">Șterge tabelul</button>
+      <!-- Adăugați un buton pentru a deselecta toate rândurile din tabel -->
+      <button type="button" class="btn btn-primary" onclick="uncheckRows()">Deselectează rândurile</button>
+      
+      </div>
+      <!-- Tabelul creat-->
+  <p>Medicamentele selectate:</p>
+</div>
+  <div id="noulTabel">
+    
+  </div>
+  
+
+
+
+<!-- Tabelul cu medicamentele disponibile-->
+<div class="container-fluid">
+  <hr class="border border-danger border-2 opacity-50">
+  <p>Lista medicamentelor disponibile:</p>
         <table class="table table-bordered table-striped table-hover">
     <thead>
       
@@ -498,6 +538,9 @@
 
     </tbody>
         </table>
+      </div>
+
+
     </main>
 
     <footer class="py-3 my-4">
@@ -512,7 +555,8 @@
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
         integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
       </script>
-    
+    <!-- script pt creare tabel-->
+    <script src="script.js"></script>
     </body>
     
     </html>

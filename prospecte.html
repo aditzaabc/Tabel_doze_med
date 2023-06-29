@@ -28,11 +28,31 @@
 <body>
   <header>
     <!-- place navbar here -->
-    <div class="alert alert-danger d-flex align-items-center" role="alert">
-        <i class="bi bi-exclamation-triangle-fill text-danger me-3"  style="font-size: 2rem;"></i>
-        Atentie! Aceasta pagina este pentru uz personal.<br>Datele din tabel sunt orientative iar calculul dozei este raspunderea celui care administreaza medicamentul, doza trebuind verificata in prospectul medicamentului sau recomandata de un medic.
+    <!-- Buton CAUTION -->
+    <div class="container-fluid text-center m-2">
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        <span class="fs-1">CAUTION</span>&nbsp;<i class="bi bi-exclamation-triangle-fill me-2"  style="font-size: 3rem;"></i><span class="fw-bolder">Read Before You Use</span>
+      </button>
+    </div>
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content text-bg-danger">
+      <div class="modal-header text-center">
+        <h2 class="modal-title fs-5" id="staticBackdropLabel">Atentie!<br>Aceasta pagina este pentru uz personal.</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-  </header>
+      <div class="modal-body">
+        Datele din tabel sunt orientative iar calculul dozei este raspunderea celui care administreaza medicamentul, doza trebuind verificata in prospectul medicamentului sau recomandata de un medic.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Understood</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
 
   <main>
 
